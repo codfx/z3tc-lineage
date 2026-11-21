@@ -1,0 +1,16 @@
+title: z3tc LineageOS 19.1
+description: Unofficial LineageOS 19.1 (Android 12) port for the Sony Xperia Z3 Tablet Compact (SGP621). In testing, not released.
+baseurl: /z3tc-lineage
+url: https://codfx.github.io
+theme: minima
+minima:
+  skin: auto
+header_pages:
+  - install.md
+  - known-issues.md
+  - changelog.md
+  - technical-notes.md
+  - sources.md
+exclude:
+  - README.md
+  - LICENSE
