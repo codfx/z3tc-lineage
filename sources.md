@@ -50,6 +50,8 @@ to be extracted from your own device.
 
 - **marcogiannetta-pi** for the shinano LineageOS 19.1 (12L) trees for the Z3 Compact
   (device, common trees and kernel), which this port is built on.
+- **The sony_scorpion LineageOS 18.1 z3tc device tree** (GitLab), the source of the
+  tablet-specific files (audio, sensors, overlays, properties, kernel config).
 - **The LineageOS project** and its contributors, including the former shinano and
   msm8974 maintainers whose trees and fixes made 19.1 on this platform possible.
 - **AOSP** and the CAF/CodeLinaro legacy Qualcomm code.
