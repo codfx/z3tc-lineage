@@ -10,10 +10,6 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
 
 ## Investigating
 
-- **Video recording does not work.** Photos work with both cameras, but recording fails:
-  Sony's camera blob only supports camera HAL v1, and Android 12's video path asks for a
-  buffer mode the HAL v1 client does not support. A work-in-progress patch exists; it is
-  not in the build.
 - **The SoC never reaches its deepest sleep state.** The power manager's counters show
   VDD minimisation many times a night but XO shutdown (main clock off) zero times;
   something keeps a vote on the main clock.
@@ -37,6 +33,10 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
 
 These are tested on the test tablet (installed by hand) and will be in the next build.
 
+- **Video recording** (frameworks/av, device/sony/msm8974-common): Sony's camera blob only
+  supports camera HAL v1, whose recording path Android 12 had removed. The path is restored,
+  and the camera now hands video frames over as plain YUV copies in the encoder's own layout.
+  Recording works at 720p and 1080p with sound, 30 fps and correct colours.
 - **Adaptive brightness** (device/sony/z3tc): the light sensor reports in steps of about
   10 lux, and room light reads only about 10 lux. A new brightness curve gives each low
   step its own brightness, so auto-brightness now follows the room (tested in a dark room,

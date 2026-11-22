@@ -23,7 +23,7 @@ z3tc-specific device, kernel and framework changes. All source is public, see
 | Bluetooth | ✅ Works | Two kernel crash fixes |
 | Mobile (LTE, calls, SMS) | ✅ Works | Earpiece and loudspeaker |
 | Camera (photos) | ✅ Works | Legacy camera HALv1 support restored |
-| Camera (video recording) | ❌ Not working | Investigating |
+| Camera (video recording) | ✅ Works | 720p and 1080p with sound (in the next build) |
 | GPS | ✅ Works | Slow cold fix without assisted data |
 | microSD | ✅ Works | vfat tested; exFAT not yet tested |
 | Sensors | ✅ Works | Auto-brightness follows the room (new curve, in the next build) |

@@ -8,6 +8,8 @@ Dated milestones of the port. Test builds only; nothing has been released.
 
 ## 2026-11-22
 
+- **Video recording works:** restored the camera HAL v1 recording path and pass video frames
+  as YUV in the encoder's layout; 720p and 1080p with sound (tested, not yet in a build).
 - **Adaptive brightness:** new brightness curve for the light sensor's 10-lux steps;
   brightness now follows room light (tested, not yet in a build).
 
