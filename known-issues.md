@@ -33,12 +33,20 @@ Open issues on the current test build. Fixed items move to the [Changelog](chang
 
 ## Fixed, not yet in a build
 
+These are tested on the test tablet (installed by hand) and will be in the next build.
+
 - **Settings > Battery crash (LineageParts).** LineageOS' charging control service is
-  not present on this device and the settings code threw an exception. The fix (in
-  lineage-sdk) is written and tested and will be in the next build.
+  not present on this device and the settings code threw an exception. Fix in lineage-sdk.
+- **Launcher and SystemUI crashes** (frameworks/base): Recents no longer crashes the
+  launcher when the shell is busy; the status bar no longer crashes after its view is destroyed.
+- **microSD** (device/sony/z3tc): the tablet's own fstab with the correct card controller.
+- **Wi-Fi suspend filter** (kernel): mDNS and SSDP no longer wake the tablet in standby.
 
 ## Standby
 
-- Standby drain is under investigation. After the Wi-Fi suspend filter, Bluetooth and
-  the battery gauge are the largest wake sources. A Qualcomm TrustZone helper
+- Night standby with the Wi-Fi suspend filter: about 0.55 %/h, awake 4.3 % of the time.
+  Bluetooth and the battery gauge are now the largest wake sources.
+- **Investigating: the SoC never reaches its deepest sleep state.** The power manager's
+  counters show VDD minimisation many times a night but XO shutdown (main clock off) zero
+  times; something keeps a vote on the main clock. A Qualcomm TrustZone helper
   (`suntrold`) restarts about every 23 seconds; it is not the cause of any crash.

@@ -9,7 +9,8 @@ Dated milestones of the port. Test builds only; nothing has been released.
 ## 2026-11-21
 
 - **Wi-Fi suspend filter** (kernel): while asleep, the Wi-Fi chip now drops mDNS and SSDP
-  multicast instead of waking the tablet. Awake share in standby: 13.2 % → 4.6 %.
+  multicast instead of waking the tablet. Night standby: about 0.55 %/h drain and 4.3 % awake
+  (earlier night: 0.87 %/h and 13.2 %, but with an adb connection open that also woke the tablet).
   See [Technical notes](technical-notes.html#wi-fi-suspend-filter).
 - **Launcher and SystemUI crash fixes** (frameworks/base): Recents no longer crashes the
   launcher when the shell is busy; the status bar no longer crashes after its view is destroyed.

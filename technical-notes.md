@@ -65,11 +65,19 @@ mode: it drops broadcast/multicast frames and UDP to ports 5353 (mDNS) and 1900 
 over IPv4 and IPv6. The filters only act while the screen is off; the tablet stays
 reachable (ping and connections wake it as before).
 
-| Screen off, on battery | Before | After |
+| Night standby, screen off, on battery | Before | After |
 |---|---|---|
-| Awake share | 13.2 % | 4.6 % |
-| Sleeps per hour | 724 | 214 |
-| Median sleep | 1.9 s | 11.2 s |
+| Battery drain | 0.87 %/h | about 0.55 %/h |
+| Awake share | 13.2 % | 4.3 % |
+| Sleeps per hour | 724 | 200 |
+| Median sleep | 1.9 s | 12.5 s |
+| Wi-Fi wake-ups | 1108 in 13.8 h | 122 in 11 h |
+
+Note on the comparison: the "Before" night had a Wi-Fi adb connection open, which by itself
+wakes the tablet about once a second, so the table overstates what the filter alone did. There
+was no clean night on the old kernel. The "After" night (11 h, adb closed) is the first clean
+measurement. The drain is read in 1 % steps (72 % → 66 %), so it lies between about 0.46 and
+0.64 %/h.
 
 ## Charge limiter
 

@@ -19,7 +19,7 @@ z3tc-specific device, kernel and framework changes. All source is public, see
 |---|---|---|
 | Boot, UI, stability | ✅ Works | No crashes or resets in repeated 9-round app-cycle tests |
 | Display / smoothness | ✅ Works | SurfaceFlinger fix: app close animations no longer freeze |
-| Wi-Fi | ✅ Works | Suspend filter for mDNS/SSDP improves standby |
+| Wi-Fi | ✅ Works | Suspend filter for mDNS/SSDP improves standby (boot image, not yet in a ROM build) |
 | Bluetooth | ✅ Works | Two kernel crash fixes |
 | Mobile (LTE, calls, SMS) | ✅ Works | Earpiece and loudspeaker |
 | Camera (photos) | ✅ Works | Legacy camera HALv1 support restored |
