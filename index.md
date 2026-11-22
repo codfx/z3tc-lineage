@@ -23,10 +23,10 @@ z3tc-specific device, kernel and framework changes. All source is public, see
 | Bluetooth | ✅ Works | Two kernel crash fixes |
 | Mobile (LTE, calls, SMS) | ✅ Works | Earpiece and loudspeaker |
 | Camera (photos) | ✅ Works | Legacy camera HALv1 support restored |
-| Camera (video recording) | ❌ Not working | Work in progress |
+| Camera (video recording) | ❌ Not working | Investigating |
 | GPS | ✅ Works | Slow cold fix without assisted data |
 | microSD | ✅ Works | vfat tested; exFAT not yet tested |
-| Sensors | ⚠️ Partly | Auto-brightness reacts in coarse steps |
+| Sensors | ✅ Works | Auto-brightness follows the room (new curve, in the next build) |
 | Charge limiter | ✅ Works | Quick Settings tile + Settings > Battery |
 | Standby / Doze | ✅ Works | Deep Doze; tuning ongoing |
 | SELinux | ⚠️ Permissive | Enforcing planned before release |

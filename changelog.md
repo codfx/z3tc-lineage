@@ -6,6 +6,11 @@ permalink: /changelog.html
 
 Dated milestones of the port. Test builds only; nothing has been released.
 
+## 2026-11-22
+
+- **Adaptive brightness:** new brightness curve for the light sensor's 10-lux steps;
+  brightness now follows room light (tested, not yet in a build).
+
 ## 2026-11-21
 
 - **Wi-Fi suspend filter** (kernel): while asleep, the Wi-Fi chip now drops mDNS and SSDP
