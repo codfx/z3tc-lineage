@@ -6,6 +6,14 @@ permalink: /changelog.html
 
 Dated milestones of the port. Test builds only; nothing has been released.
 
+## 2026-11-23
+
+- **Test build 2026-11-22** contains video recording, adaptive brightness, the Settings >
+  Battery crash fix (lineage-sdk), the launcher and SystemUI crash fixes, the microSD fstab
+  and the Wi-Fi suspend filter. Passed: boot check, a 9-round app-cycle test, hand checks
+  (video, microSD, brightness, charge limit tile) and a 17.6 h standby test (awake 4.5 %,
+  deep Doze 94 %, no crashes).
+
 ## 2026-11-22
 
 - **Video recording works:** restored the camera HAL v1 recording path and pass video frames

@@ -31,7 +31,11 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
 
 ## Fixed, not yet in a build
 
-These are tested on the test tablet (installed by hand) and will be in the next build.
+Nothing at the moment.
+
+## In the current build
+
+The current test build (2026-11-22) contains:
 
 - **Video recording** (frameworks/av, device/sony/msm8974-common): Sony's camera blob only
   supports camera HAL v1, whose recording path Android 12 had removed. The path is restored,
@@ -47,11 +51,6 @@ These are tested on the test tablet (installed by hand) and will be in the next 
   launcher when the shell is busy; the status bar no longer crashes after its view is destroyed.
 - **microSD** (device/sony/z3tc): the tablet's own fstab with the correct card controller.
 - **Wi-Fi suspend filter** (kernel): mDNS and SSDP no longer wake the tablet in standby.
-
-## In the current build
-
-The current test build (2026-11-20) contains, among others:
-
 - SurfaceFlinger fix (smooth app close and dialog animations) and the hardware reset fix.
 - Charge limiter with Quick Settings tile and settings screen; correct status bar battery
   icon while the limiter pauses charging.
@@ -64,6 +63,9 @@ See the [Changelog](changelog.html) for the full list.
 
 - Night standby with the Wi-Fi suspend filter: about 0.55 %/h, awake 4.3 % of the time.
   Bluetooth and the battery gauge are now the largest wake sources.
+- Build 2026-11-22, 17.6 h standby: awake 4.5 % of the time, deep Doze 94 %, no crashes.
+  The drain figure is unclear this time: the battery gauge corrected its reading partway
+  through (about 1 % every 14 minutes with no extra activity). A re-measure is planned.
 - Deepest sleep state not reached: see **Investigating** above.
 - A Qualcomm TrustZone helper (`suntrold`) restarts about every 23 seconds; it is not
   the cause of any crash.
