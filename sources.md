@@ -21,6 +21,7 @@ Every project with changes for this port is a public fork under
 | packages/apps/Camera2 | [android_packages_apps_Camera2](https://github.com/codfx/android_packages_apps_Camera2) |
 | vendor/qcom/opensource/power | [android_vendor_qcom_opensource_power](https://github.com/codfx/android_vendor_qcom_opensource_power) |
 | lineage-sdk | [android_lineage-sdk](https://github.com/codfx/android_lineage-sdk) |
+| packages/modules/adb | [android_packages_modules_adb](https://github.com/codfx/android_packages_modules_adb) |
 | hardware/broadcom/wlan | [android_hardware_broadcom_wlan](https://github.com/codfx/android_hardware_broadcom_wlan) |
 | hardware/qcom-caf/msm8974/display | [android_hardware_qcom_display](https://github.com/codfx/android_hardware_qcom_display) |
 | hardware/interfaces | [android_hardware_interfaces](https://github.com/codfx/android_hardware_interfaces) |
@@ -49,7 +50,12 @@ to be extracted from your own device.
 ## Credits
 
 - **marcogiannetta-pi** for the shinano LineageOS 19.1 (12L) trees for the Z3 Compact
-  (device, common trees and kernel), which this port is built on.
+  (device, common trees and kernel), which this port is built on, and for the USB adb fix
+  from his newer shinano builds: the
+  [legacy USB support for adbd](https://github.com/marcogiannetta-pi/android_device_sony_shinano-common/blob/lineage-22.2/patches/packages_modules_adb/0001-adb-Bring-back-legacy-USB-support-and-exclude-from-host.patch)
+  and the FunctionFS/DWC3 parts of his
+  [kernel commit 9a19a537](https://github.com/marcogiannetta-pi/android_kernel_sony_msm8974/commit/9a19a537a8154b52dc294e596aa536221e1e917b).
+  See his repositories at [github.com/marcogiannetta-pi](https://github.com/marcogiannetta-pi).
 - **The sony_scorpion LineageOS 18.1 z3tc device tree** (GitLab), the source of the
   tablet-specific files (audio, sensors, overlays, properties, kernel config).
 - **The LineageOS project** and its contributors, including the former shinano and

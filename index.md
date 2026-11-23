@@ -21,6 +21,7 @@ z3tc-specific device, kernel and framework changes. All source is public, see
 | Display / smoothness | ✅ Works | SurfaceFlinger fix: app close animations no longer freeze |
 | Wi-Fi | ✅ Works | Suspend filter for mDNS/SSDP improves standby |
 | Bluetooth | ✅ Works | Two kernel crash fixes |
+| USB (adb, MTP) | ✅ Works | adb over USB fixed (in the next build); MTP file transfer |
 | Mobile (LTE, calls, SMS) | ✅ Works | Earpiece and loudspeaker |
 | Camera (photos) | ✅ Works | Legacy camera HALv1 support restored |
 | Camera (video recording) | ✅ Works | 720p and 1080p with sound |

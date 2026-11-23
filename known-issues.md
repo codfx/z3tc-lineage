@@ -17,7 +17,7 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
 ## Partly working
 
 - **Recovery: no adb sideload in the 19.1 recovery.** adb shows "offline" on the computer.
-  A related issue: USB adb in Android can hang with a data cable connected (Wi-Fi adb works).
+  The USB adb fix below should cover it once the recovery is rebuilt; not tested yet.
 - **SELinux is permissive.** Enforcing mode is planned before release, followed by a
   re-test of the camera and charge limiter policies.
 - **exFAT microSD cards are untested.** vfat cards mount, eject and re-mount correctly.
@@ -39,6 +39,10 @@ These are tested on the test tablet (installed by hand) and will be in the next 
   level, and a silent notification "Charging paused at X%" sits in the shade (tap opens the
   settings, swipe to dismiss). The tile and the settings screen now stay
   in sync, and the charge limit has a battery-with-heart icon.
+- **USB adb** (kernel, packages/modules/adb): adb over a USB cable works, and Wi-Fi adb no
+  longer hangs while a cable is connected. Android 12's adb needs asynchronous USB I/O that
+  this 3.4 kernel lacks; marcogiannetta-pi's legacy USB support for adbd and his USB kernel
+  fixes solve it. Tested: large adb and MTP transfers both ways, 20 plug/unplug cycles.
 
 ## In the current build
 

@@ -8,6 +8,10 @@ Dated milestones of the port. Test builds only; nothing has been released.
 
 ## 2026-11-23
 
+- **USB adb works:** adbd uses blocking USB I/O again (marcogiannetta-pi's legacy USB patch
+  and USB kernel fixes); Wi-Fi adb no longer hangs with a cable connected (tested, not yet in
+  a build).
+
 - **Test build 2026-11-22** contains video recording, adaptive brightness, the Settings >
   Battery crash fix (lineage-sdk), the launcher and SystemUI crash fixes, the microSD fstab
   and the Wi-Fi suspend filter. Passed: boot check, a 9-round app-cycle test, hand checks
