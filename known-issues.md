@@ -35,8 +35,9 @@ These are tested on the test tablet (installed by hand) and will be in the next 
 
 - **Charge limit: paused indicator** (device/sony/z3tc, frameworks/base): while the charge
   limit has paused charging, the status bar battery shows a small heart instead of the bolt
-  (default and circle styles), and a silent notification "Charging paused at X%" sits in the
-  shade (tap opens the settings, swipe to dismiss). The tile and the settings screen now stay
+  (default and circle styles) for the whole pause, until charging starts again at the lower
+  level, and a silent notification "Charging paused at X%" sits in the shade (tap opens the
+  settings, swipe to dismiss). The tile and the settings screen now stay
   in sync, and the charge limit has a battery-with-heart icon.
 
 ## In the current build
