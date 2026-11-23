@@ -13,6 +13,8 @@ Dated milestones of the port. Test builds only; nothing has been released.
   and the Wi-Fi suspend filter. Passed: boot check, a 9-round app-cycle test, hand checks
   (video, microSD, brightness, charge limit tile) and a 17.6 h standby test (awake 4.5 %,
   deep Doze 94 %, no crashes).
+- **Charge limit paused indicator:** a heart in the status bar battery and a silent
+  "Charging paused" notification while the limit holds charging off (tested, not yet in a build).
 
 ## 2026-11-22
 
