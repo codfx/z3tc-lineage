@@ -8,6 +8,10 @@ Dated milestones of the port. Test builds only; nothing has been released.
 
 ## 2026-11-24
 
+- **Bluetooth re-enable checked:** 40 quick off/on cycles (1 s and 3 s apart) all came back on
+  in about 1.1 s, with no crashes. The earlier "several attempts" problem was fixed by the
+  Bluetooth kernel and HAL fixes; removed from the known issues. The next build also allows the
+  controller more start-up time as a safety margin.
 - **TrustZone helper restart loop fixed:** `suntrold` no longer restarts every ~23 s with the
   screen off (its start script now waits with a sleep loop; tested, not yet in a build).
 

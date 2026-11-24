@@ -27,7 +27,6 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
 - **"Ghost" of a closing app.** Rarely, a faded image of the app that is closing stays on
   screen for a few seconds when another app opens or the screen unlocks. Not reproduced
   in recordings yet.
-- **Bluetooth re-enable may take several attempts** after switching it off and on quickly.
 
 ## Fixed, not yet in a build
 
