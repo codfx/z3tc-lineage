@@ -18,16 +18,18 @@ z3tc-specific device, kernel and framework changes. All source is public, see
 | Area | Status | Notes |
 |---|---|---|
 | Boot, UI, stability | ✅ Works | No crashes or resets in repeated 9-round app-cycle tests |
-| Display / smoothness | ✅ Works | SurfaceFlinger fix: app close animations no longer freeze |
+| Display / smoothness | ✅ Works | SurfaceFlinger fix: app close animations no longer freeze; tablet layout with taskbar and split screen (in the next build) |
 | Wi-Fi | ✅ Works | Suspend filter for mDNS/SSDP improves standby |
 | Bluetooth | ✅ Works | Two kernel crash fixes |
 | USB (adb, MTP) | ✅ Works | adb over USB fixed (in the next build); MTP file transfer |
+| USB OTG | ⚠️ Issue | Tablet restarted when a USB stick was plugged in; detected after the restart. Investigating |
 | Mobile (LTE, calls, SMS) | ✅ Works | Earpiece and loudspeaker |
-| Camera (photos) | ✅ Works | Legacy camera HALv1 support restored |
+| Camera (photos) | ✅ Works | Legacy camera HALv1 support restored; front camera photo and video work |
 | Camera (video recording) | ✅ Works | 720p and 1080p with sound |
 | GPS | ✅ Works | Slow cold fix without assisted data |
 | microSD | ✅ Works | vfat tested; exFAT not yet tested |
-| Sensors | ✅ Works | Auto-brightness follows the room (new curve) |
+| Sensors | ✅ Works | Auto-brightness follows the room (new curve); auto-rotate works |
+| Vibration, screen recording | ✅ Works | Screen recording slows apps slightly while it runs |
 | Charge limiter | ✅ Works | Quick Settings tile + Settings > Battery; heart battery icon while paused (in the next build) |
 | Standby / Doze | ✅ Works | Deep Doze; TrustZone helper restart loop fixed (in the next build); tuning ongoing |
 | SELinux | ⚠️ Permissive | Enforcing planned before release |

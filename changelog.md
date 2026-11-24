@@ -8,6 +8,9 @@ Dated milestones of the port. Test builds only; nothing has been released.
 
 ## 2026-11-24
 
+- **Tablet layout:** screen density 320 instead of 340, so the launcher and SystemUI use the
+  tablet layout: 12L taskbar, dock at the bottom in landscape, split screen (tested, not yet in
+  a build). Being refined: the landscape dock background and the taskbar's navigation buttons.
 - **Bluetooth re-enable checked:** 40 quick off/on cycles (1 s and 3 s apart) all came back on
   in about 1.1 s, with no crashes. The earlier "several attempts" problem was fixed by the
   Bluetooth kernel and HAL fixes; removed from the known issues. The next build also allows the

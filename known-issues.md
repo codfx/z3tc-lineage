@@ -10,6 +10,9 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
 
 ## Investigating
 
+- **USB OTG: the tablet restarted when a USB stick was plugged in.** The stick failed to
+  enumerate, then the tablet restarted by itself; after the restart the stick was detected.
+  Logs are saved; tests are planned.
 - **The SoC never reaches its deepest sleep state.** The power manager's counters show
   VDD minimisation many times a night but XO shutdown (main clock off) zero times;
   something keeps a vote on the main clock.
