@@ -30,6 +30,7 @@ z3tc-specific device, kernel and framework changes. All source is public, see
 | microSD | ✅ Works | vfat tested; exFAT not yet tested |
 | Sensors | ✅ Works | Auto-brightness follows the room (new curve); auto-rotate works |
 | Vibration, screen recording | ✅ Works | Screen recording slows apps slightly while it runs |
+| Torch | — N/A | This tablet has no camera flash; the Flashlight tile is hidden automatically |
 | Charge limiter | ✅ Works | Quick Settings tile + Settings > Battery; heart battery icon while paused (in the next build) |
 | Standby / Doze | ✅ Works | Deep Doze; TrustZone helper restart loop fixed (in the next build); tuning ongoing |
 | SELinux | ⚠️ Permissive | Enforcing planned before release |
