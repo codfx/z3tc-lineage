@@ -43,6 +43,11 @@ These are tested on the test tablet (installed by hand) and will be in the next 
   longer hangs while a cable is connected. Android 12's adb needs asynchronous USB I/O that
   this 3.4 kernel lacks; marcogiannetta-pi's legacy USB support for adbd and his USB kernel
   fixes solve it. Tested: large adb and MTP transfers both ways, 20 plug/unplug cycles.
+- **TrustZone helper restart loop** (device/sony/shinano-common): the `suntrold` service
+  restarted about every 23 seconds with the screen off. Its start script waited with
+  `tail -f /dev/null`, and on this 3.4 kernel that wait fails each time the system tries to
+  suspend, so the service ended and was started again. The script now waits with a sleep
+  loop. Tested: no restarts with the screen off, no CPU use, the camera still works.
 
 ## In the current build
 
@@ -81,5 +86,6 @@ See the [Changelog](changelog.html) for the full list.
 - Re-measure (14.5 h, including daytime): about 0.65 %/h, awake 4.1 % of the time; the charge
   counter and the percentage agree.
 - Deepest sleep state not reached: see **Investigating** above.
-- A Qualcomm TrustZone helper (`suntrold`) restarts about every 23 seconds; it is not
-  the cause of any crash.
+- A Qualcomm TrustZone helper (`suntrold`) restarted about every 23 seconds with the
+  screen off; fixed, see **Fixed, not yet in a build** above. The next standby test
+  measures the effect.

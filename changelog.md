@@ -6,6 +6,11 @@ permalink: /changelog.html
 
 Dated milestones of the port. Test builds only; nothing has been released.
 
+## 2026-11-24
+
+- **TrustZone helper restart loop fixed:** `suntrold` no longer restarts every ~23 s with the
+  screen off (its start script now waits with a sleep loop; tested, not yet in a build).
+
 ## 2026-11-23
 
 - **USB adb works:** adbd uses blocking USB I/O again (marcogiannetta-pi's legacy USB patch
