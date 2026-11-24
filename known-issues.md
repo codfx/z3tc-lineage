@@ -75,8 +75,11 @@ See the [Changelog](changelog.html) for the full list.
 - Night standby with the Wi-Fi suspend filter: about 0.55 %/h, awake 4.3 % of the time.
   Bluetooth and the battery gauge are now the largest wake sources.
 - Build 2026-11-22, 17.6 h standby: awake 4.5 % of the time, deep Doze 94 %, no crashes.
-  The drain figure is unclear this time: the battery gauge corrected its reading partway
-  through (about 1 % every 14 minutes with no extra activity). A re-measure is planned.
+  The percentage fell faster partway through (about 1 % every 14 minutes with no extra
+  activity); the battery gauge's charge counter shows this was the gauge correcting its
+  reading: the real drain was about 0.8 %/h.
+- Re-measure (14.5 h, including daytime): about 0.65 %/h, awake 4.1 % of the time; the charge
+  counter and the percentage agree.
 - Deepest sleep state not reached: see **Investigating** above.
 - A Qualcomm TrustZone helper (`suntrold`) restarts about every 23 seconds; it is not
   the cause of any crash.
