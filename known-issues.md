@@ -47,7 +47,8 @@ These are tested on the test tablet (installed by hand) and will be in the next 
   restarted about every 23 seconds with the screen off. Its start script waited with
   `tail -f /dev/null`, and on this 3.4 kernel that wait fails each time the system tries to
   suspend, so the service ended and was started again. The script now waits with a sleep
-  loop. Tested: no restarts with the screen off, no CPU use, the camera still works.
+  loop. Tested: the new wait survives the same interruption that ended `tail`, uses no CPU,
+  and the camera still works; the next overnight standby test confirms it on battery.
 
 ## In the current build
 
