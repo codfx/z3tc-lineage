@@ -49,6 +49,11 @@ These are tested on the test tablet (installed by hand) and will be in the next 
   of 200-250 ms) with gesture and 3-button navigation, and apps, split screen, the keyboard,
   rotation and the lock screen lay out as before.
 
+- **Charge limit: raising the limit while charging is paused** (device/sony/z3tc): charging
+  now resumes within a few seconds; before, it stayed paused until the battery fell to the
+  resume level or the charger was replugged. Tested on the charger (limit 55 % paused it,
+  raising it to 70 % resumed charging about 2 s later).
+
 ## In the current build
 
 The current test build (2026-11-24) contains:

@@ -20,6 +20,8 @@ Dated milestones of the port. Test builds only; nothing has been released.
   landscape dock; they appear only with 3-button navigation (its bar background).
 - **Home screen pause fixed:** in tablet layout, pressing Home from an app no longer pauses
   for about 0.2 s (window manager fix; tested, not yet in a build).
+- **Charge limit:** raising the limit while charging is paused now resumes charging without
+  a replug (tested, not yet in a build).
 - **USB OTG restart not reproduced:** 11 plug tests with the same stick (slow, wobbly,
   half-inserted, rapid, screen off and asleep) all worked; still under investigation.
 - **Deepest sleep state checked:** the SoC spends 82 % of a night in its deepest state (XO
