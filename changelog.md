@@ -16,6 +16,8 @@ Dated milestones of the port. Test builds only; nothing has been released.
   standby test (before: about 2,200 times a night).
 - **Double tap to wake checked:** turned on in Settings, it is armed again at every boot,
   and a night with it on drained no more than nights with it off.
+- **Tablet layout, gesture navigation:** no grey bars on the lock screen or behind the
+  landscape dock; they appear only with 3-button navigation (its bar background).
 - **USB OTG restart not reproduced:** 11 plug tests with the same stick (slow, wobbly,
   half-inserted, rapid, screen off and asleep) all worked; still under investigation.
 - **Deepest sleep state checked:** the SoC spends 82 % of a night in its deepest state (XO
