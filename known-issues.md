@@ -17,12 +17,6 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
   detection of the stick, which these tests never caused. USB sticks otherwise work (NTFS
   tested).
 
-- **Tablet layout: going back to the home screen pauses for about 0.2 s.** The taskbar
-  changes height between the home screen and apps, so Android re-lays out the whole screen
-  on every switch, and on this GPU that takes about 200 ms. A fix in the window manager
-  is being looked at. (Swiping an app closed works at about 25-30 fps; split screen opens in
-  about 0.5-0.7 s and closes in 0.7-0.9 s.)
-
 ## Partly working
 
 - **Recovery: no adb sideload in the 19.1 recovery.** adb shows "offline" on the computer.
@@ -47,6 +41,13 @@ These are tested on the test tablet (installed by hand) and will be in the next 
   suspend, so the service ended and was started again. The script now waits with a sleep
   loop. Tested: the new wait survives the same interruption that ended `tail`, uses no CPU,
   and the camera still works. Confirmed on battery: 0 restarts in a 15.7 h standby test.
+
+- **Home screen pause in tablet layout** (frameworks/base): pressing Home from an app paused
+  for about 0.2 s, because the taskbar's reported height differs between the home screen and
+  apps and Android re-laid out the whole screen on every switch. The window manager now keeps
+  the taskbar's height stable. Tested: the pause is gone (longest frame about 50-90 ms instead
+  of 200-250 ms) with gesture and 3-button navigation, and apps, split screen, the keyboard,
+  rotation and the lock screen lay out as before.
 
 ## In the current build
 
