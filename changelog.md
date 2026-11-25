@@ -6,6 +6,17 @@ permalink: /changelog.html
 
 Dated milestones of the port. Test builds only; nothing has been released.
 
+## 2026-11-25
+
+- **Test build 2026-11-24** contains the charge limit paused indicator (heart battery icon,
+  silent notification) and USB adb. Passed: boot check, a 9-round app-cycle test, hand checks
+  (USB adb and MTP, charge limit pause, video, microSD, brightness) and a 15.7 h standby test:
+  about 0.51-0.59 %/h, awake 4.1 %, deep Doze 93 %, no reboot, no crashes.
+- **TrustZone helper fix confirmed on battery:** `suntrold` did not restart once in the
+  standby test (before: about 2,200 times a night).
+- **Deepest sleep state checked:** the SoC spends 82 % of a night in its deepest state (XO
+  shutdown with minimised voltage); removed from the known issues.
+
 ## 2026-11-24
 
 - **Tablet layout:** screen density 320 instead of 340, so the launcher and SystemUI use the

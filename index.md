@@ -21,7 +21,7 @@ z3tc-specific device, kernel and framework changes. All source is public, see
 | Display / smoothness | ✅ Works | SurfaceFlinger fix: app close animations no longer freeze; tablet layout with taskbar and split screen (in the next build) |
 | Wi-Fi | ✅ Works | Suspend filter for mDNS/SSDP improves standby |
 | Bluetooth | ✅ Works | Two kernel crash fixes |
-| USB (adb, MTP) | ✅ Works | adb over USB fixed (in the next build); MTP file transfer |
+| USB (adb, MTP) | ✅ Works | adb over USB; MTP file transfer |
 | USB OTG | ⚠️ Issue | Tablet restarted when a USB stick was plugged in; detected after the restart. Investigating |
 | Mobile (LTE, calls, SMS) | ✅ Works | Earpiece and loudspeaker |
 | Camera (photos) | ✅ Works | Legacy camera HALv1 support restored; front camera photo and video work |
@@ -31,8 +31,8 @@ z3tc-specific device, kernel and framework changes. All source is public, see
 | Sensors | ✅ Works | Auto-brightness follows the room (new curve); auto-rotate works |
 | Vibration, screen recording | ✅ Works | Screen recording slows apps slightly while it runs |
 | Torch | — N/A | This tablet has no camera flash; the Flashlight tile is hidden automatically |
-| Charge limiter | ✅ Works | Quick Settings tile + Settings > Battery; heart battery icon while paused (in the next build) |
-| Standby / Doze | ✅ Works | Deep Doze; TrustZone helper restart loop fixed (in the next build); tuning ongoing |
+| Charge limiter | ✅ Works | Quick Settings tile + Settings > Battery; heart battery icon and silent notification while paused |
+| Standby / Doze | ✅ Works | About 0.5-0.6 %/h overnight with Wi-Fi on; deep Doze; deepest SoC sleep state reached |
 | SELinux | ⚠️ Permissive | Enforcing planned before release |
 | Recovery | ⚠️ Partly | 19.1 recovery: adb sideload does not work yet |
 

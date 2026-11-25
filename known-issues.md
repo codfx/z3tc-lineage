@@ -13,9 +13,6 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
 - **USB OTG: the tablet restarted when a USB stick was plugged in.** The stick failed to
   enumerate, then the tablet restarted by itself; after the restart the stick was detected.
   Logs are saved; tests are planned.
-- **The SoC never reaches its deepest sleep state.** The power manager's counters show
-  VDD minimisation many times a night but XO shutdown (main clock off) zero times;
-  something keeps a vote on the main clock.
 
 ## Partly working
 
@@ -35,6 +32,17 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
 
 These are tested on the test tablet (installed by hand) and will be in the next build.
 
+- **TrustZone helper restart loop** (device/sony/shinano-common): the `suntrold` service
+  restarted about every 23 seconds with the screen off. Its start script waited with
+  `tail -f /dev/null`, and on this 3.4 kernel that wait fails each time the system tries to
+  suspend, so the service ended and was started again. The script now waits with a sleep
+  loop. Tested: the new wait survives the same interruption that ended `tail`, uses no CPU,
+  and the camera still works. Confirmed on battery: 0 restarts in a 15.7 h standby test.
+
+## In the current build
+
+The current test build (2026-11-24) contains:
+
 - **Charge limit: paused indicator** (device/sony/z3tc, frameworks/base): while the charge
   limit has paused charging, the status bar battery shows a small heart instead of the bolt
   (default and circle styles) for the whole pause, until charging starts again at the lower
@@ -45,17 +53,6 @@ These are tested on the test tablet (installed by hand) and will be in the next 
   longer hangs while a cable is connected. Android 12's adb needs asynchronous USB I/O that
   this 3.4 kernel lacks; marcogiannetta-pi's legacy USB support for adbd and his USB kernel
   fixes solve it. Tested: large adb and MTP transfers both ways, 20 plug/unplug cycles.
-- **TrustZone helper restart loop** (device/sony/shinano-common): the `suntrold` service
-  restarted about every 23 seconds with the screen off. Its start script waited with
-  `tail -f /dev/null`, and on this 3.4 kernel that wait fails each time the system tries to
-  suspend, so the service ended and was started again. The script now waits with a sleep
-  loop. Tested: the new wait survives the same interruption that ended `tail`, uses no CPU,
-  and the camera still works; the next overnight standby test confirms it on battery.
-
-## In the current build
-
-The current test build (2026-11-22) contains:
-
 - **Video recording** (frameworks/av, device/sony/msm8974-common): Sony's camera blob only
   supports camera HAL v1, whose recording path Android 12 had removed. The path is restored,
   and the camera now hands video frames over as plain YUV copies in the encoder's own layout.
@@ -88,7 +85,10 @@ See the [Changelog](changelog.html) for the full list.
   reading: the real drain was about 0.8 %/h.
 - Re-measure (14.5 h, including daytime): about 0.65 %/h, awake 4.1 % of the time; the charge
   counter and the percentage agree.
-- Deepest sleep state not reached: see **Investigating** above.
-- A Qualcomm TrustZone helper (`suntrold`) restarted about every 23 seconds with the
-  screen off; fixed, see **Fixed, not yet in a build** above. The next standby test
-  measures the effect.
+- Build 2026-11-24 with the TrustZone helper fix, 15.7 h standby: about 0.51-0.59 %/h
+  (percentage and charge counter agree), awake 4.1 % of the time, deep Doze 93 %, no reboot,
+  no crashes; the helper did not restart once (before: about 2,200 times a night).
+  Double tap to wake was on all night.
+- Checked: the SoC reaches its deepest sleep state (XO shutdown with minimised voltage)
+  for 82 % of a night. The earlier "XO shutdown zero times" reading was the shallower
+  counter, which the power manager skips when it can go straight to the deepest state.
