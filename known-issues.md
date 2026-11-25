@@ -37,6 +37,12 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
   re-test of the camera and charge limiter policies.
 - **exFAT microSD cards are untested.** vfat cards mount, eject and re-mount correctly.
 
+- **Split screen from Overview with animations switched off.** With all animation scales off
+  (Developer options), choosing two apps in Overview only partly starts split screen: one
+  half stays empty and the other black. The launcher no longer crashes there (fixed, in the
+  next build). Workaround: drag an app from the taskbar to the screen edge, or keep
+  animations on - then Overview split works normally.
+
 ## Occasional
 
 - **"Ghost" of a closing app.** Rarely, a faded image of the app that is closing stays on

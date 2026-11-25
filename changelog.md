@@ -13,6 +13,9 @@ Dated milestones of the port. Test builds only; nothing has been released.
   GPS assistance data servers, a longer Bluetooth start-up margin and the window manager
   extensions. Passed: image check, boot check and a 9-round app-cycle test (0 crashes);
   overnight standby test pending.
+- **Split screen from Overview with animations off:** the launcher crashed when the second
+  app was chosen; fixed (tested, not yet in a build). The split itself still only partly
+  starts with animations off; use the taskbar drag.
 - **White flash during app transitions:** recorded and found on the previous build too (not a
   regression); investigation planned.
 - **Test build 2026-11-24** contains the charge limit paused indicator (heart battery icon,
