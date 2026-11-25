@@ -25,9 +25,6 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
 
 - **FM radio app crashes on start.** The app's playback notification has no notification
   channel, which Android 12 rejects. The fix in the app is known; the radio itself is untested.
-- **Headphones: the right side is much quieter than the left.** Android sends equal stereo
-  to both sides and the codec routing is correct; the codec's own plug detection reads the
-  right channel differently. Under investigation.
 - **Occasional short audio stutter** while an app is open. Android's audio buffers show no
   gaps; one error on the link between the audio DSP and the codec was logged. Under
   investigation.
@@ -45,6 +42,14 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
 - **"Ghost" of a closing app.** Rarely, a faded image of the app that is closing stays on
   screen for a few seconds when another app opens or the screen unlocks. Not reproduced
   in recordings yet.
+
+## Hardware of the test tablet (not ROM bugs)
+
+- **Headphones: the right side is quieter on the test tablet.** Android sends equal stereo,
+  the codec routing and gains are identical for both sides, and the same headphones sound
+  balanced on another device. The codec measures about 38 ohms on the left and 57 ohms on the
+  right (at first plug-in even an open circuit), which points to a worn or dirty right contact
+  in this unit's headphone jack.
 
 ## Fixed, not yet in a build
 
