@@ -23,6 +23,15 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
   close animation. With animations switched off (Developer options) it almost disappears.
   Suspected cause: the graphics compositor on this GPU during transitions; tests are planned.
 
+- **FM radio app crashes on start.** The app's playback notification has no notification
+  channel, which Android 12 rejects. The fix in the app is known; the radio itself is untested.
+- **Headphones: the right side is much quieter than the left.** Android sends equal stereo
+  to both sides and the codec routing is correct; the codec's own plug detection reads the
+  right channel differently. Under investigation.
+- **Occasional short audio stutter** while an app is open. Android's audio buffers show no
+  gaps; one error on the link between the audio DSP and the codec was logged. Under
+  investigation.
+
 ## Partly working
 
 - **Recovery: no adb sideload in the 19.1 recovery.** adb shows "offline" on the computer.
