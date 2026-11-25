@@ -22,7 +22,7 @@ z3tc-specific device, kernel and framework changes. All source is public, see
 | Wi-Fi | ✅ Works | Suspend filter for mDNS/SSDP improves standby |
 | Bluetooth | ✅ Works | Two kernel crash fixes |
 | USB (adb, MTP) | ✅ Works | adb over USB; MTP file transfer |
-| USB OTG | ⚠️ Issue | Tablet restarted when a USB stick was plugged in; detected after the restart. Investigating |
+| USB OTG | ⚠️ Issue | USB sticks work (NTFS tested); one restart on plug-in, not reproduced in 11 tests. Investigating |
 | Mobile (LTE, calls, SMS) | ✅ Works | Earpiece and loudspeaker |
 | Camera (photos) | ✅ Works | Legacy camera HALv1 support restored; front camera photo and video work |
 | Camera (video recording) | ✅ Works | 720p and 1080p with sound |

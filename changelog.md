@@ -14,6 +14,8 @@ Dated milestones of the port. Test builds only; nothing has been released.
   about 0.51-0.59 %/h, awake 4.1 %, deep Doze 93 %, no reboot, no crashes.
 - **TrustZone helper fix confirmed on battery:** `suntrold` did not restart once in the
   standby test (before: about 2,200 times a night).
+- **USB OTG restart not reproduced:** 11 plug tests with the same stick (slow, wobbly,
+  half-inserted, rapid, screen off and asleep) all worked; still under investigation.
 - **Deepest sleep state checked:** the SoC spends 82 % of a night in its deepest state (XO
   shutdown with minimised voltage); removed from the known issues.
 

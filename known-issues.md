@@ -12,7 +12,10 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
 
 - **USB OTG: the tablet restarted when a USB stick was plugged in.** The stick failed to
   enumerate, then the tablet restarted by itself; after the restart the stick was detected.
-  Logs are saved; tests are planned.
+  Not reproduced in 11 plug tests (slow, wobbly, half-inserted, rapid, screen off and
+  asleep): every full insertion was detected in about 1 s. The restart followed a failed
+  detection of the stick, which these tests never caused. USB sticks otherwise work (NTFS
+  tested).
 
 ## Partly working
 
