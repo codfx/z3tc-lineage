@@ -8,6 +8,13 @@ Dated milestones of the port. Test builds only; nothing has been released.
 
 ## 2026-11-25
 
+- **Test build 2026-11-25** contains the tablet layout (320 dpi, taskbar, lock screen
+  rotation), the home screen pause fix, the charge limit resume fix, the TrustZone helper fix,
+  GPS assistance data servers, a longer Bluetooth start-up margin and the window manager
+  extensions. Passed: image check, boot check and a 9-round app-cycle test (0 crashes);
+  overnight standby test pending.
+- **White flash during app transitions:** recorded and found on the previous build too (not a
+  regression); investigation planned.
 - **Test build 2026-11-24** contains the charge limit paused indicator (heart battery icon,
   silent notification) and USB adb. Passed: boot check, a 9-round app-cycle test, hand checks
   (USB adb and MTP, charge limit pause, video, microSD, brightness) and a 15.7 h standby test:

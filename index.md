@@ -18,7 +18,7 @@ z3tc-specific device, kernel and framework changes. All source is public, see
 | Area | Status | Notes |
 |---|---|---|
 | Boot, UI, stability | ✅ Works | No crashes or resets in repeated 9-round app-cycle tests |
-| Display / smoothness | ✅ Works | SurfaceFlinger fix: app close animations no longer freeze; tablet layout with taskbar and split screen (in the next build) |
+| Display / smoothness | ✅ Works | SurfaceFlinger fix: app close animations no longer freeze; tablet layout with taskbar and split screen; brief white flash during app transitions (investigating) |
 | Wi-Fi | ✅ Works | Suspend filter for mDNS/SSDP improves standby |
 | Bluetooth | ✅ Works | Two kernel crash fixes |
 | USB (adb, MTP) | ✅ Works | adb over USB; MTP file transfer |

@@ -17,6 +17,12 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
   detection of the stick, which these tests never caused. USB sticks otherwise work (NTFS
   tested).
 
+- **Brief white flash during app open and close animations.** For about 0.2 s the screen
+  turns white while an app opens or closes to the home screen. Screen recordings show it on
+  the previous build too, so it is not new; it is more visible with the tablet layout's larger
+  close animation. With animations switched off (Developer options) it almost disappears.
+  Suspected cause: the graphics compositor on this GPU during transitions; tests are planned.
+
 ## Partly working
 
 - **Recovery: no adb sideload in the 19.1 recovery.** adb shows "offline" on the computer.
@@ -34,6 +40,12 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
 ## Fixed, not yet in a build
 
 These are tested on the test tablet (installed by hand) and will be in the next build.
+
+None at the moment.
+
+## In the current build
+
+The current test build (2026-11-25) contains:
 
 - **TrustZone helper restart loop** (device/sony/shinano-common): the `suntrold` service
   restarted about every 23 seconds with the screen off. Its start script waited with
@@ -54,9 +66,16 @@ These are tested on the test tablet (installed by hand) and will be in the next 
   resume level or the charger was replugged. Tested on the charger (limit 55 % paused it,
   raising it to 70 % resumed charging about 2 s later).
 
-## In the current build
+- **Tablet layout** (device/sony/z3tc): screen density 320 instead of 340, so the launcher
+  and SystemUI use the tablet layout (12L taskbar, dock at the bottom in landscape, split
+  screen), and the lock screen rotates with the device by default.
+- **GPS assistance data** (device/sony/msm8974-common): Android 12 now finds the download
+  servers for the satellite assistance data (XTRA), for faster fixes.
+- **Bluetooth start-up margin**: the controller gets 8 s instead of 2.9 s to start.
+- **Tablet configuration** (device/sony/z3tc): the window manager extensions library that
+  Settings and apps use for large-screen layouts is now included.
 
-The current test build (2026-11-24) contains:
+The previous test build (2026-11-24) added:
 
 - **Charge limit: paused indicator** (device/sony/z3tc, frameworks/base): while the charge
   limit has paused charging, the status bar battery shows a small heart instead of the bolt
