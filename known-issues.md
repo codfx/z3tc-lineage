@@ -17,6 +17,12 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
   detection of the stick, which these tests never caused. USB sticks otherwise work (NTFS
   tested).
 
+- **Tablet layout: going back to the home screen pauses for about 0.2 s.** The taskbar
+  changes height between the home screen and apps, so Android re-lays out the whole screen
+  on every switch, and on this GPU that takes about 200 ms. A fix in the window manager
+  is being prepared. (Swiping an app closed works at about 25-30 fps; split screen opens in
+  about 0.5-0.7 s and closes in 0.7-0.9 s.)
+
 ## Partly working
 
 - **Recovery: no adb sideload in the 19.1 recovery.** adb shows "offline" on the computer.
