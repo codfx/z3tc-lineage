@@ -20,7 +20,7 @@ z3tc-specific device, kernel and framework changes. All source is public, see
 | Boot, UI, stability | ✅ Works | No crashes or resets in repeated 9-round app-cycle tests |
 | Display / smoothness | ✅ Works | SurfaceFlinger fix: app close animations no longer freeze; tablet layout with taskbar and split screen; brief white flash during app transitions (investigating) |
 | Wi-Fi | ✅ Works | Suspend filter for mDNS/SSDP improves standby |
-| Bluetooth | ✅ Works | Two kernel crash fixes |
+| Bluetooth | ✅ Works | Two kernel crash fixes; AirPods Pro: audio and calls work (battery display apps need BLE features this chip lacks) |
 | USB (adb, MTP) | ✅ Works | adb over USB; MTP file transfer |
 | USB OTG | ⚠️ Issue | USB sticks work (NTFS tested); one restart on plug-in, not reproduced in 11 tests. Investigating |
 | Mobile (LTE, calls, SMS) | ✅ Works | Earpiece and loudspeaker |
