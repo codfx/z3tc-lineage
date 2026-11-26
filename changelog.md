@@ -16,8 +16,9 @@ Dated milestones of the port. Test builds only; nothing has been released.
 - **Split screen from Overview with animations off:** the launcher crashed when the second
   app was chosen; fixed (tested, not yet in a build). The split itself still only partly
   starts with animations off; use the taskbar drag.
-- **White flash during app transitions:** recorded and found on the previous build too (not a
-  regression); investigation planned.
+- **Close animation flicker:** frame-by-frame capture shows a one-frame flash of the closing
+  app's window at the end of the close animation (investigating). An earlier note about white
+  frames in screen recordings was wrong: those were gaps in the recordings.
 - **Test build 2026-11-24** contains the charge limit paused indicator (heart battery icon,
   silent notification) and USB adb. Passed: boot check, a 9-round app-cycle test, hand checks
   (USB adb and MTP, charge limit pause, video, microSD, brightness) and a 15.7 h standby test:

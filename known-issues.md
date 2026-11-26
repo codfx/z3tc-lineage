@@ -17,11 +17,11 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
   detection of the stick, which these tests never caused. USB sticks otherwise work (NTFS
   tested).
 
-- **Brief white flash during app open and close animations.** For about 0.2 s the screen
-  turns white while an app opens or closes to the home screen. Screen recordings show it on
-  the previous build too, so it is not new; it is more visible with the tablet layout's larger
-  close animation. With animations switched off (Developer options) it almost disappears.
-  Suspected cause: the graphics compositor on this GPU during transitions; tests are planned.
+- **Brief flicker when closing an app to the home screen.** Sometimes, mostly on the first
+  close of an app, the app's icon appears larger than normal for a moment and a faded
+  full-size copy of the app window flashes for one frame at the end of the close animation.
+  Rarely seen with animations switched off. Under investigation (launcher animation end /
+  graphics compositor timing).
 
 - **FM radio app crashes on start.** The app's playback notification has no notification
   channel, which Android 12 rejects. The fix in the app is known; the radio itself is untested.
