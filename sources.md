@@ -61,4 +61,7 @@ to be extracted from your own device.
 - **The LineageOS project** and its contributors, including the former shinano and
   msm8974 maintainers whose trees and fixes made 19.1 on this platform possible.
 - **AOSP** and the CAF/CodeLinaro legacy Qualcomm code.
+- **Sunny Goyal (Google)** for the Android 13 launcher change AOSP Launcher3
+  [617f9fae](https://android.googlesource.com/platform/packages/apps/Launcher3/+/617f9fae3de4016443ee75bfcdb82c1757ab5c3f), backported to fix the flicker at the end of the app close animation
+  (Change-Id I2a106f4d7661f9d409425ce2ed755e74e1abe14b).
 - Port, z3tc device tree and fixes: **codfx**.

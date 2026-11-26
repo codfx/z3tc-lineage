@@ -9,8 +9,11 @@ Dated milestones of the port. Test builds only; nothing has been released.
 ## 2026-11-26
 
 - **Close animation flicker fixed:** at the end of the swipe-up close a faded full-size copy of
-  the app window could flash for one frame; fixed with a change from Android 13's launcher
-  (tested frame by frame, not yet in a build).
+  the app window could flash for one frame; fixed with a change from Android 13's launcher:
+  AOSP Launcher3 [617f9fae](https://android.googlesource.com/platform/packages/apps/Launcher3/+/617f9fae3de4016443ee75bfcdb82c1757ab5c3f)
+  "Avoiding updating task via scroll if RectF spring animation is running" by Sunny Goyal
+  (Bug 231333965, Change-Id I2a106f4d7661f9d409425ce2ed755e74e1abe14b; not on the public AOSP
+  Gerrit). Tested frame by frame, not yet in a build.
 
 ## 2026-11-25
 
