@@ -17,12 +17,6 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
   detection of the stick, which these tests never caused. USB sticks otherwise work (NTFS
   tested).
 
-- **Brief flicker when closing an app to the home screen.** Sometimes, mostly on the first
-  close of an app, the app's icon appears larger than normal for a moment and a faded
-  full-size copy of the app window flashes for one frame at the end of the close animation.
-  Rarely seen with animations switched off. Under investigation (launcher animation end /
-  graphics compositor timing).
-
 - **FM radio app crashes on start.** The app's playback notification has no notification
   channel, which Android 12 rejects. The fix in the app is known; the radio itself is untested.
 - **Occasional short audio stutter** while an app is open. Android's audio buffers show no
@@ -61,7 +55,13 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
 
 These are tested on the test tablet (installed by hand) and will be in the next build.
 
-None at the moment.
+- **Flicker when closing an app to the home screen** (launcher): at the end of the swipe-up
+  close, a faded full-size copy of the app window could flash for one frame, mostly on the
+  first close of an app. Fixed with a change taken from Android 13's launcher (Launcher3
+  617f9fae). Tested frame by frame: no flash in 7 closes (before: 1 in about 3).
+- **Launcher crash when choosing split screen from Overview with animations off**
+  (launcher): fixed; the split itself still only partly starts with animations off (see
+  the known issue above).
 
 ## In the current build
 

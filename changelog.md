@@ -6,6 +6,12 @@ permalink: /changelog.html
 
 Dated milestones of the port. Test builds only; nothing has been released.
 
+## 2026-11-26
+
+- **Close animation flicker fixed:** at the end of the swipe-up close a faded full-size copy of
+  the app window could flash for one frame; fixed with a change from Android 13's launcher
+  (tested frame by frame, not yet in a build).
+
 ## 2026-11-25
 
 - **Test build 2026-11-25** contains the tablet layout (320 dpi, taskbar, lock screen
