@@ -6,6 +6,12 @@ permalink: /changelog.html
 
 Dated milestones of the port. Test builds only; nothing has been released.
 
+## 2026-11-27
+
+- **Standby with AirPods battery apps:** a night with CAPod installed drained about twice as
+  fast (two 2-hour periods at about 100 mA); without it the next night was back to normal.
+  Noted under Standby in the known issues.
+
 ## 2026-11-26
 
 - **Close animation flicker fixed:** at the end of the swipe-up close a faded full-size copy of

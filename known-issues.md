@@ -131,6 +131,12 @@ See the [Changelog](changelog.html) for the full list.
 
 ## Standby
 
+- **AirPods battery apps (e.g. CAPod) roughly double the standby drain.** They keep the
+  tablet's older Bluetooth chip scanning in the background (it has no hardware scan
+  filtering or batching). With CAPod installed, a night had two 2-hour periods at about
+  100 mA instead of about 27 mA (average 51 mA); after uninstalling it the next night had
+  no such periods. Bluetooth audio and calls with AirPods work without such an app.
+
 - Night standby with the Wi-Fi suspend filter: about 0.55 %/h, awake 4.3 % of the time.
   Bluetooth and the battery gauge are now the largest wake sources.
 - Build 2026-11-22, 17.6 h standby: awake 4.5 % of the time, deep Doze 94 %, no crashes.
