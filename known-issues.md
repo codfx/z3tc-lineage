@@ -17,9 +17,10 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
   detection of the stick, which these tests never caused. USB sticks otherwise work (NTFS
   tested).
 
-- **Occasional short audio stutter** while an app is open. Android's audio buffers show no
-  gaps; one error on the link between the audio DSP and the codec was logged. Under
-  investigation.
+- **Short audio stutter** (FM radio constantly, media sometimes while apps open). Android's
+  audio path shows no gaps: the playback buffer in the kernel never ran empty, the FM capture
+  is continuous, and no driver errors were logged; switching Bluetooth off does not help.
+  Under investigation (on hold for now).
 
 ## Partly working
 
@@ -52,6 +53,10 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
   balanced on another device. The codec measures about 38 ohms on the left and 57 ohms on the
   right (at first plug-in even an open circuit), which points to a worn or dirty right contact
   in this unit's headphone jack. It is intermittent: later both sides were balanced again.
+  Re-checked when only YouTube sounded quiet on the right: FM, a left/right test tone and
+  YouTube all use the same audio path with equal levels on both sides, no sound effects are
+  applied, and balance and mono audio are at their defaults; the test tone was balanced. At
+  that plug-in the right contact again measured almost open circuit.
 
 ## Fixed, not yet in a build
 
