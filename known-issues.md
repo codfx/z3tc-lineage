@@ -60,7 +60,8 @@ These are tested on the test tablet (installed by hand) and will be in the next 
 - **FM radio layout in landscape** (packages/apps/FMRadio): the five control buttons were
   packed into the left part of a thin header bar. On the tablet the landscape header is now
   taller, with the frequency centred in a big font and the buttons spread evenly along its
-  bottom, clear of the play/stop button. Tested in landscape and portrait.
+  bottom, clear of the play/stop button. In portrait the frequency is centred as well.
+  Tested in landscape and portrait.
 
 ## In the current build
 
