@@ -8,6 +8,9 @@ Dated milestones of the port. Test builds only; nothing has been released.
 
 ## 2026-11-27
 
+- **FM radio fixed:** the app no longer crashes on start (notification channel); the radio
+  plays through headphones (tested, not yet in a build).
+
 - **Standby with AirPods battery apps:** a night with CAPod installed drained about twice as
   fast (two 2-hour periods at about 100 mA); without it the next night was back to normal.
   Noted under Standby in the known issues.

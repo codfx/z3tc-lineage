@@ -17,8 +17,6 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
   detection of the stick, which these tests never caused. USB sticks otherwise work (NTFS
   tested).
 
-- **FM radio app crashes on start.** The app's playback notification has no notification
-  channel, which Android 12 rejects. The fix in the app is known; the radio itself is untested.
 - **Occasional short audio stutter** while an app is open. Android's audio buffers show no
   gaps; one error on the link between the audio DSP and the codec was logged. Under
   investigation.
@@ -62,6 +60,10 @@ These are tested on the test tablet (installed by hand) and will be in the next 
 - **Launcher crash when choosing split screen from Overview with animations off**
   (launcher): fixed; the split itself still only partly starts with animations off (see
   the known issue above).
+
+- **FM radio** (packages/apps/FMRadio): the app crashed on start because its playback
+  notification had no notification channel, which Android 12 rejects. Fixed; tested with
+  headphones as the antenna: the radio plays.
 
 ## In the current build
 
