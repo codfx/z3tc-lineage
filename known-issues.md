@@ -57,6 +57,14 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
 
 These are tested on the test tablet (installed by hand) and will be in the next build.
 
+- **FM radio layout in landscape** (packages/apps/FMRadio): the five control buttons were
+  packed into the left part of the header bar. They now spread evenly across it and stay
+  clear of the play/stop button. Tested in landscape and portrait.
+
+## In the current build
+
+The current test build (2026-11-27) added:
+
 - **Flicker when closing an app to the home screen** (launcher): at the end of the swipe-up
   close, a faded full-size copy of the app window could flash for one frame, mostly on the
   first close of an app. Fixed with a change taken from Android 13's launcher (Launcher3
@@ -64,14 +72,18 @@ These are tested on the test tablet (installed by hand) and will be in the next 
 - **Launcher crash when choosing split screen from Overview with animations off**
   (launcher): fixed; the split itself still only partly starts with animations off (see
   the known issue above).
-
 - **FM radio** (packages/apps/FMRadio): the app crashed on start because its playback
   notification had no notification channel, which Android 12 rejects. Fixed; tested with
   headphones as the antenna: the radio plays.
+- **Settings: single pane by default** (device/sony/z3tc): the two-pane Settings layout felt
+  slow on this tablet, so Settings opens as one list again.
+- **Boot after a system update** (device/sony/z3tc): stale compiled system code from before
+  an update is now removed at boot, so the system does not restart once on the second boot.
 
-## In the current build
+Passed: image check, boot check and a 9-round app-cycle test (0 crashes); overnight standby
+test pending.
 
-The current test build (2026-11-25) contains:
+The previous test build (2026-11-25) contained:
 
 - **TrustZone helper restart loop** (device/sony/shinano-common): the `suntrold` service
   restarted about every 23 seconds with the screen off. Its start script waited with
@@ -101,7 +113,7 @@ The current test build (2026-11-25) contains:
 - **Tablet configuration** (device/sony/z3tc): the window manager extensions library that
   Settings and apps use for large-screen layouts is now included.
 
-The previous test build (2026-11-24) added:
+The test build before that (2026-11-24) added:
 
 - **Charge limit: paused indicator** (device/sony/z3tc, frameworks/base): while the charge
   limit has paused charging, the status bar battery shows a small heart instead of the bolt

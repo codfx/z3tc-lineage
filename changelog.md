@@ -8,8 +8,16 @@ Dated milestones of the port. Test builds only; nothing has been released.
 
 ## 2026-11-27
 
+- **Test build 2026-11-27** contains the close animation flicker fix, the launcher split
+  screen crash fix, the FM radio crash fix, single-pane Settings by default and a boot cleanup
+  after system updates. Passed: image check, boot check and a 9-round app-cycle test (0
+  crashes); overnight standby test pending.
+
+- **FM radio layout in landscape:** the control buttons now spread across the header bar
+  (tested, not yet in a build).
+
 - **FM radio fixed:** the app no longer crashes on start (notification channel); the radio
-  plays through headphones (tested, not yet in a build).
+  plays through headphones.
 
 - **Standby with AirPods battery apps:** a night with CAPod installed drained about twice as
   fast (two 2-hour periods at about 100 mA); without it the next night was back to normal.
