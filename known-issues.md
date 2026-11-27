@@ -47,7 +47,7 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
   the codec routing and gains are identical for both sides, and the same headphones sound
   balanced on another device. The codec measures about 38 ohms on the left and 57 ohms on the
   right (at first plug-in even an open circuit), which points to a worn or dirty right contact
-  in this unit's headphone jack.
+  in this unit's headphone jack. It is intermittent: later both sides were balanced again.
 
 ## Fixed, not yet in a build
 
