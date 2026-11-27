@@ -13,8 +13,8 @@ Dated milestones of the port. Test builds only; nothing has been released.
   after system updates. Passed: image check, boot check and a 9-round app-cycle test (0
   crashes); overnight standby test pending.
 
-- **FM radio layout in landscape:** the control buttons now spread across the header bar
-  (tested, not yet in a build).
+- **FM radio layout in landscape:** a taller header with the frequency centred in a big font,
+  and the control buttons spread along it (tested, not yet in a build).
 
 - **FM radio fixed:** the app no longer crashes on start (notification channel); the radio
   plays through headphones.
