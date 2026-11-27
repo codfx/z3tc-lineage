@@ -23,6 +23,10 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
 
 ## Partly working
 
+- **FM: manual tuning and favourites work; seek is unreliable on this tablet.** Station
+  levels vary between scans and the tablet's own interference looks like stations, so
+  "next station" can skip a real station or stop on a silent frequency. Tune manually
+  (sound is clear on headphones and speaker).
 - **Recovery: no adb sideload in the 19.1 recovery.** adb shows "offline" on the computer.
   The USB adb fix below should cover it once the recovery is rebuilt; not tested yet.
 - **SELinux is permissive.** Enforcing mode is planned before release, followed by a
