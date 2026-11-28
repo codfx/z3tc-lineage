@@ -6,12 +6,17 @@ permalink: /changelog.html
 
 Dated milestones of the port. Test builds only; nothing has been released.
 
+## 2026-11-28
+
+- **Test build 2026-11-27 standby test passed:** 12.5 h overnight at about 0.48 %/h (23 mA
+  average, the lowest so far), awake 2.8 % of the time, deep Doze 92 %, no crashes.
+
 ## 2026-11-27
 
 - **Test build 2026-11-27** contains the close animation flicker fix, the launcher split
   screen crash fix, the FM radio crash fix, single-pane Settings by default and a boot cleanup
   after system updates. Passed: image check, boot check and a 9-round app-cycle test (0
-  crashes); overnight standby test pending.
+  crashes).
 
 - **FM radio layout in landscape:** a taller header with the frequency centred in a big font,
   and the control buttons spread along it; the frequency is centred in portrait too (tested,

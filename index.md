@@ -34,7 +34,7 @@ z3tc-specific device, kernel and framework changes. All source is public, see
 | Vibration, screen recording | ✅ Works | Screen recording slows apps slightly while it runs |
 | Torch | — N/A | This tablet has no camera flash; the Flashlight tile is hidden automatically |
 | Charge limiter | ✅ Works | Quick Settings tile + Settings > Battery; heart battery icon and silent notification while paused |
-| Standby / Doze | ✅ Works | About 0.5-0.6 %/h overnight with Wi-Fi on; deep Doze; deepest SoC sleep state reached |
+| Standby / Doze | ✅ Works | About 0.5 %/h overnight with Wi-Fi on; deep Doze; deepest SoC sleep state reached |
 | SELinux | ⚠️ Permissive | Enforcing planned before release |
 | Recovery | ⚠️ Partly | 19.1 recovery: adb sideload does not work yet |
 

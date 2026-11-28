@@ -87,8 +87,8 @@ The current test build (2026-11-27) added:
 - **Boot after a system update** (device/sony/z3tc): stale compiled system code from before
   an update is now removed at boot, so the system does not restart once on the second boot.
 
-Passed: image check, boot check and a 9-round app-cycle test (0 crashes); overnight standby
-test pending.
+Passed: image check, boot check, a 9-round app-cycle test (0 crashes) and a 12.5 h
+overnight standby test (about 0.48 %/h).
 
 The previous test build (2026-11-25) contained:
 
@@ -174,6 +174,10 @@ See the [Changelog](changelog.html) for the full list.
   (percentage and charge counter agree), awake 4.1 % of the time, deep Doze 93 %, no reboot,
   no crashes; the helper did not restart once (before: about 2,200 times a night).
   Double tap to wake was on all night.
+- Build 2026-11-27, 12.5 h overnight standby: about 0.48 %/h (average 23 mA by the charge
+  counter, the lowest so far), awake 2.8 % of the time, deep Doze 92 %, no reboot, no crashes.
+  The higher drain in the early evening seen the night before (about 40-57 mA) did not
+  return.
 - Checked: the SoC reaches its deepest sleep state (XO shutdown with minimised voltage)
   for 82 % of a night. The earlier "XO shutdown zero times" reading was the shallower
   counter, which the power manager skips when it can go straight to the deepest state.
