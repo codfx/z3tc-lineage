@@ -23,7 +23,7 @@ permalink: /install.html
 4. Optional: sideload add-ons (for example Magisk) before the first boot.
 5. Reboot. The first boot takes several minutes.
 
-The 19.1 recovery cannot sideload yet (adb shows "offline"), so the release will
+The 19.1 recovery can sideload, but its screen does not refresh yet, so the release will
 either fix it or recommend a known-good recovery. See [Known issues](known-issues.html).
 
 Downloads, checksums and exact file names will be added here at release.
