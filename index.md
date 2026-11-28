@@ -36,7 +36,7 @@ z3tc-specific device, kernel and framework changes. All source is public, see
 | Charge limiter | ✅ Works | Quick Settings tile + Settings > Battery; heart battery icon and silent notification while paused |
 | Standby / Doze | ✅ Works | About 0.5 %/h overnight with Wi-Fi on; deep Doze; deepest SoC sleep state reached |
 | SELinux | ⚠️ Permissive | Enforcing planned before release |
-| Recovery | ⚠️ Partly | 19.1 recovery: adb and sideload work, the screen does not refresh yet (kernel display fix pending) |
+| Recovery | ⚠️ Partly | 19.1 recovery: adb, sideload and the screen work in the current build; final check in the release candidate |
 
 See [Known issues](known-issues.html) for details and [Changelog](changelog.html)
 for progress.

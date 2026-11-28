@@ -28,11 +28,11 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
   levels vary between scans and the tablet's own interference looks like stations, so
   "next station" can skip a real station or stop on a silent frequency. Tune manually
   (sound is clear on headphones and speaker).
-- **Recovery: the 19.1 recovery's screen does not refresh.** adb and sideload work in it
-  (tested: a 50 MB package transferred in 6 s and its signature verified), and the keys work,
-  but the screen stays on the first picture. The same recovery with the 18.1 kernel displays
-  normally, so the cause is in the kernel's display code for this panel. Until that is fixed,
-  the test tablet keeps the 18.1 recovery.
+- **Recovery: 19.1 recovery being verified.** In the current build's recovery adb, sideload
+  (a 50 MB package in 6 s, signature verified) and the screen work: the menu follows every key
+  press. An earlier recovery image (2026-11-23) showed a frozen screen; that has not come back
+  since the process-group fix. It gets checked once more in the release-candidate tests; until
+  then the test tablet keeps the 18.1 recovery.
 - **SELinux is permissive.** Enforcing mode is planned before release, followed by a
   re-test of the camera and charge limiter policies.
 - **exFAT microSD cards are untested.** vfat cards mount, eject and re-mount correctly.

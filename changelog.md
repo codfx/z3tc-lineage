@@ -13,8 +13,8 @@ Dated milestones of the port. Test builds only; nothing has been released.
   yet in a build).
 
 - **Recovery tests:** the 19.1 recovery's adb and sideload now work (50 MB package in 6 s,
-  signature verified). Its screen still does not refresh; with the 18.1 kernel the same
-  recovery displays normally, so the fix belongs in the kernel's display code.
+  signature verified), and in the current build its screen follows every key press too (an
+  earlier note here said it did not refresh; that was an older recovery image).
 
 - **Test build 2026-11-27 standby test passed:** 12.5 h overnight at about 0.48 %/h (23 mA
   average, the lowest so far), awake 2.8 % of the time, deep Doze 92 %, no crashes.
