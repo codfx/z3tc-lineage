@@ -8,6 +8,10 @@ Dated milestones of the port. Test builds only; nothing has been released.
 
 ## 2026-11-28
 
+- **"Wallpaper & style" fixed:** it opened the Settings main menu instead of the wallpaper
+  picker (a side effect of the single-pane Settings default); fixed in Settings (tested, not
+  yet in a build).
+
 - **Recovery tests:** the 19.1 recovery's adb and sideload now work (50 MB package in 6 s,
   signature verified). Its screen still does not refresh; with the 18.1 kernel the same
   recovery displays normally, so the fix belongs in the kernel's display code.

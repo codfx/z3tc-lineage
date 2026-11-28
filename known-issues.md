@@ -65,6 +65,13 @@ once a test build contains it. Every fix is also listed in the [Changelog](chang
 
 These are tested on the test tablet (installed by hand) and will be in the next build.
 
+- **"Wallpaper & style" opened the Settings main menu** (packages/apps/Settings): with
+  Settings in single-pane mode (the default since build 2026-11-27), the wallpaper picker
+  handed itself over to Settings' two-pane view, which then showed only its main menu. Settings
+  now offers that hand-over only when it really shows two panes. Tested: Wallpaper & style
+  opens from the home screen; with two-pane Settings switched on it still opens inside
+  Settings.
+
 - **FM radio layout in landscape** (packages/apps/FMRadio): the five control buttons were
   packed into the left part of a thin header bar. On the tablet the landscape header is now
   taller, with the frequency centred in a big font and the buttons spread evenly along its
